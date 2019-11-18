@@ -136,7 +136,7 @@ fn generate_response_parse_test(
         is_ok = if is_ok { "" } else { "!" }))
 }
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct Response {
     pub service: String,
     pub action: String,

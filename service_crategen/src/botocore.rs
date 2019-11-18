@@ -15,7 +15,7 @@ use crate::util;
 
 const BOTOCORE_DIR: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/botocore/botocore/data/");
 
-#[derive(Debug, Deserialize)]
+#[derive(Deserialize)]
 pub struct ServiceDefinition {
     pub documentation: Option<String>,
     pub examples: Option<BTreeMap<String, String>>,
@@ -345,7 +345,7 @@ impl<'a> Operation {
     }
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Deserialize)]
 pub struct Metadata {
     #[serde(rename = "apiVersion")]
     pub api_version: String,

@@ -4,7 +4,6 @@ use crate::botocore::{Member, Operation, ServiceDefinition, Shape, ShapeType, Va
 use crate::cargo;
 use crate::config::ServiceConfig;
 
-#[derive(Debug)]
 pub struct Service<'a> {
     config: &'a crate::ServiceConfig,
     definition: ServiceDefinition,
